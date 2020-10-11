@@ -10,6 +10,11 @@ const handleLogin = async (req, res) => {
             return res.status(400).json({msg: "Fill all credentials"});
         }
 
+        const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(!regex.test(email)) {
+            return res.status(400).json({msg: "Enter a valid Email Address"});
+        }
+
         const user = await User.findOne({email: email});
         if(!user) {
             return res.status(400).json({msg: "User does not exist"});
