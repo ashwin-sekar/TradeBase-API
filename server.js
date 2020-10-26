@@ -6,6 +6,8 @@ const register = require('./routes/register');
 const login = require('./routes/login');
 const token = require('./routes/token');
 const del = require('./routes/delete');
+const pinStock = require('./routes/pinStock');
+const getStock = require('./routes/getStock');
 const auth = require('./middleware/auth');
 
 const app = express();
@@ -42,6 +44,10 @@ app.post('/tokenValid', (req,res) => {token.checkToken(req,res)});
 app.get('/user', auth, (req,res) => {User.handleUser(req,res)});
 
 app.delete('/delete', auth, (req,res) => {del.delUser(req,res)});
+
+app.post('/pinStock', (req,res) => {pinStock.pinStock(req,res)});
+
+app.get('/getStock/:id', auth, (req,res) => {getStock.getStock(req,res)});
 
 const port = process.env.PORT || 3000;
 
