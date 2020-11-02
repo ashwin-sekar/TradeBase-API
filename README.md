@@ -1,7 +1,7 @@
-# TradeBase-API
+# TradeBase (Server)
 
-Back-end application for a react based web-app to watch stocks.
-Made using Nodejs and express.
+Back-end for a MERN based web-app to watch stocks.
+<br>
 (Under development)
 
 Contributors/Maintainers:
