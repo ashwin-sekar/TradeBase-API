@@ -49,6 +49,7 @@ app.post('/pinStock', (req,res) => {pinStock.pinStock(req,res)});
 
 app.get('/getStock/:id', auth, (req,res) => {getStock.getStock(req,res)});
 
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
