@@ -25,12 +25,12 @@ $ npm start
 ```
 
 Screenshots:
-<img src="">
-<img src="">
-
+<img src="./readmeimg/img1.png">
+<img src="./readmeimg/img2.png">
+<img src="./readmeimg/img3.png">
+<img src="./readmeimg/img4.png">
 
 Contributors + Maintainers:
 
 Kaustubh Debnath
-
 S C Ashwin
