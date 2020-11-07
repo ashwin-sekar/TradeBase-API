@@ -1,6 +1,8 @@
 # Tradebase (Server)
 Back-end repo for a MERN Stack based web-app to watch stocks.
+
 Front End Repo: https://github.com/HNGP/TradeBase-client
+
 <br>
 TradeBase is a web app which tracks stocks you’ve invested in, shows when they rise or drop and also gives you new opportunities to trade. Stock data is updated in realtime, in a time series and represented on a histogram. You can pin stocks into the homepage and watch them constantly, and search for new stocks, all with a very clean, intuitive UI and UX.
 
@@ -28,5 +30,7 @@ Screenshots:
 
 
 Contributors + Maintainers:
+
 Kaustubh Debnath
+
 S C Ashwin
