@@ -32,5 +32,5 @@ Screenshots:
 
 Contributors + Maintainers:
 
-Kaustubh Debnath
+Kaustubh Debnath,
 S C Ashwin
