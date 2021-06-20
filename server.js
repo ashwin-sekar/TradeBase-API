@@ -9,6 +9,7 @@ const del = require('./routes/delete');
 const pinStock = require('./routes/pinStock');
 const getStock = require('./routes/getStock');
 const auth = require('./middleware/auth');
+const config = require('config');
 
 const app = express();
 
@@ -17,7 +18,8 @@ app.use(express.json());
 app.use(cors())
 
 //connect to mongodb
-mongoose.connect("mongodb+srv://tbUser:tbUserPass@cluster0.ccwyq.mongodb.net/tb?retryWrites=true&w=majority", 
+const db = config.get('mongoURI');
+mongoose.connect(db, 
 {
    useNewUrlParser: true,
    useUnifiedTopology: true,

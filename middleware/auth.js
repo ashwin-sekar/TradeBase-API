@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const config = require('config');
 
 const auth = async(req, res, next) => {
     try {
@@ -6,7 +7,7 @@ const auth = async(req, res, next) => {
         if(!token) {
             return res.status(401).json({msg: "No authentication token, authorization denied. "});
         }
-        const verified = jwt.verify(token, 'dYS}-*N;M~T$69gu');
+        const verified = jwt.verify(token, config.get('jwtsecret'));
         if(!verified) {
             return res.status(401).json({msg: "Token verification failed, authorization denied. "});
         }

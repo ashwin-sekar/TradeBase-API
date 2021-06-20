@@ -1,5 +1,6 @@
 const User = require("../models/user.model");
 const jwt = require("jsonwebtoken");
+const config = require('config');
 
 const checkToken = async(req,res) => {
     try {
@@ -8,7 +9,7 @@ const checkToken = async(req,res) => {
             return res.json(false);
         }
         
-        const verified = jwt.verify(token, 'dYS}-*N;M~T$69gu');
+        const verified = jwt.verify(token, config.get('jwtsecret'));
         if(!verified) {
             return res.json(false);
         }

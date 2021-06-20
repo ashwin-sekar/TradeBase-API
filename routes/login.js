@@ -1,6 +1,7 @@
 const User = require("../models/user.model");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const config = require('config');
 
 const handleLogin = async (req, res) => {
     try {
@@ -23,7 +24,7 @@ const handleLogin = async (req, res) => {
         if(!isMatch) {
             return res.status(400).json({msg: "Invalid credentials"});
         }
-        const token = jwt.sign({id: user._id }, 'dYS}-*N;M~T$69gu');
+        const token = jwt.sign({id: user._id }, config.get('jwtsecret'));
         res.json({
             token,
             user: {
